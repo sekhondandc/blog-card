@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #292929;
+    font-family: 'Open Sans',sans-serif;
+}
+.card-wrapper{
+    display: flex;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    position: relative;
+}
+.card a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #000000, transparent 50%);
+    padding: 30px;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.card-display{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.card-display h2{
+    color: #ffffff;
+}
+.card-hover h2{
+    margin: 20px 0;
+    color: #ffa500;
+}
+.card-hover p{
+    line-height: 1.4em;
+    color: #707070;
+}
+.card-hover .link{
+    margin: 20px 0 0;
+    color: #ffa500;
+}
+.card-hover{
+    display: none;
+}
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px dashed #ffffff;
+    z-index: -1;
+}
+.card-back img{
+    width: 100%;
+    height: 100%;
+}
+.card a:hover{
+    background: #ffffff;
+    transform: translate(-30px, -30px);
+}
+.card a:hover .card-display{
+    display: none;
+}
+.card a:hover .card-hover{
+    display: block;
+}
